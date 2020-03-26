@@ -41,6 +41,6 @@ job=gitversion-generate-version:
 
 alias=gitversion-build:
   tasks:
-    - gitversion-generate-version
+    - image-gitversion
   annotations:
     description: "-> build all gitversion content"

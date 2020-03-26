@@ -11,9 +11,10 @@ alias=bb-gitversion-build:
 alias=bb-gitversion-deploy:
   tasks: []
   annotations:
-    description: "-> deploy all content (not implemented yet)"
+    description: "-> deploy all content"
 
 alias=bb-gitversion-test: 
-  tasks: []
+  tasks: 
+  - gitversion-test
   annotations: 
-    description: "-> test all content (not implemented yet)"
+    description: "-> test all content."

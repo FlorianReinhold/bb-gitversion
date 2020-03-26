@@ -1,9 +1,30 @@
 
 # embedded linux building blocks - Containerized gitversion (with some improvements)
 
-# Howto integrate the building block into your own project
+This building block integrates GitVersion ("GitVersion looks at your git history and works out the semantic version of the commit being built") and adds the following features to GitVersion:
 
-The preferred way is via dockerfile.
+* Output of the version numbers as json file.
+* Output of the version numbers, divided into plain text files
+* Output of the version numbers as linux environent file.
+
+By default, only the default configuration of GitVersion is supported, and thus any GitHub flow-compatible workflow.
+
+For more information, see <https://gitversion.net/docs/>
+
+# Build
+
+Under the gitversion folder is the docker file, including the entrypoint.sh script that provides the functionality.
+
+The corresponding image can be created manually or e.g. via dobi (<https://github.com/dnephin/dobi>), the way described here.
+
+To create the image 
+
+
+# Usage
+
+# integrate into your own project
+
+There are several ways to integrate this building block into your project. The preferred way is via dockerfile.
 
 ## Integration via dockerfile
 

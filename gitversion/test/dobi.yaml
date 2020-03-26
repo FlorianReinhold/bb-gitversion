@@ -1,0 +1,28 @@
+# ===================================================
+# mount points
+# ===================================================
+
+mount=mount-gitversion-docker-sock:
+  bind: "/var/run/docker.sock"
+  path: "/var/run/docker.sock"
+  read-only: false
+
+# ===================================================
+# images
+# ===================================================
+
+image=image-test-gitversion:
+  image: elbb/test-gitversion
+  context: 'gitversion/test'
+  tags: [dev]
+
+# ===================================================
+# jobs
+# ===================================================
+
+job=gitversion-test:
+  use: image-test-gitversion
+  mounts:
+  - mount-gitversion-docker-sock
+  env:
+  - "GV_IMAGE=elbb/bb-gitversion:dev"
